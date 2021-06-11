@@ -1,15 +1,52 @@
+/** @format */
+
 import React from 'react';
 import styled from 'styled-components';
 import { MdSearch } from 'react-icons/md';
 import { GithubContext } from '../context/context';
 const Search = () => {
-  return <h2>search component</h2>;
+  const [user, setUser] = React.useState('');
+  const { requests, error, searchGithubUser, isLoading } =
+    React.useContext(GithubContext);
+  const handleSubmit = e => {
+    e.preventDefault();
+    if (user) {
+      searchGithubUser(user);
+    }
+  };
+  return (
+    <section className='section'>
+      <Wrapper className='section-center'>
+        {error.show && (
+          <ErrorWrapper>
+            <p>{error.msg}</p>
+          </ErrorWrapper>
+        )}
+        <form onSubmit={handleSubmit}>
+          <div className='form-control'>
+            <MdSearch />
+            <input
+              type='text'
+              placeholder='Enter GitHub Username'
+              value={user}
+              onChange={e => setUser(e.target.value)}
+            />
+            {requests > 0 && !isLoading && (
+              <button type='submit'>Search</button>
+            )}
+          </div>
+        </form>
+        <h3>Requests: {requests} left</h3>
+      </Wrapper>
+    </section>
+  );
 };
 
 const Wrapper = styled.div`
   position: relative;
   display: grid;
   gap: 1rem 1.75rem;
+  margin-top: 4rem;
   @media (min-width: 768px) {
     grid-template-columns: 1fr max-content;
     align-items: center;

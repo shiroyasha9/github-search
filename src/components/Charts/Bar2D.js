@@ -8,18 +8,18 @@ import FusionTheme from 'fusioncharts/themes/fusioncharts.theme.fusion';
 
 ReactFC.fcRoot(FusionCharts, Chart, FusionTheme);
 
-const Column3D = ({ data }) => {
+const Bar2D = ({ data }) => {
   const chartConfigs = {
-    type: 'column3d', // The chart type
+    type: 'bar2d', // The chart type
     width: '100%', // Width of the chart
     height: '400', // Height of the chart
     dataFormat: 'json', // Data type
     dataSource: {
       // Chart Configuration
       chart: {
-        caption: 'Most Popular',
+        caption: 'Most Forked',
         theme: 'fusion',
-        yAxisName: 'Stars',
+        yAxisName: 'Forks',
         xAxisName: 'Repos',
         xAxisNameFontSize: '16px',
         yAxisNameFontSize: '16px',
@@ -31,4 +31,4 @@ const Column3D = ({ data }) => {
   return <ReactFC {...chartConfigs} />;
 };
 
-export default Column3D;
+export default Bar2D;
