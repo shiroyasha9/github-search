@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios, { AxiosPromise, AxiosResponse } from 'axios';
 
-import mockUser from './mockData.js/mockUser';
-import mockRepos from './mockData.js/mockRepos';
-import mockFollowers from './mockData.js/mockFollowers';
-
+import { mockUser, mockRepos, mockFollowers } from './mockData';
 import { IFollower, IRepo, IUser } from '../types';
 
-const rootUrl = 'https://api.github.com';
+const ROOT_URL = 'https://api.github.com';
 
 interface IProps {
   children: React.ReactNode;
@@ -36,7 +33,7 @@ export const GithubProvider = ({ children }: IProps) => {
     toggleError();
     setIsLoading(true);
     const response: AxiosResponse<IUser> | void = await axios(
-      `${rootUrl}/users/${user}`
+      `${ROOT_URL}/users/${user}`
     ).catch(err => console.log(err));
     if (response) {
       setGithubUser(response.data);
@@ -45,7 +42,7 @@ export const GithubProvider = ({ children }: IProps) => {
       await Promise.allSettled<
         [AxiosPromise<IRepo[]>, AxiosPromise<IFollower[]>]
       >([
-        axios(`${rootUrl}/users/${login}/repos?per_page=100`),
+        axios(`${ROOT_URL}/users/${login}/repos?per_page=100`),
         axios(`${followers_url}?per_page=100`)
       ])
         .then(results => {
@@ -68,7 +65,7 @@ export const GithubProvider = ({ children }: IProps) => {
 
   //check rate
   const checkRequests = () => {
-    axios(`${rootUrl}/rate_limit`)
+    axios(`${ROOT_URL}/rate_limit`)
       .then(({ data }) => {
         let {
           rate: { remaining }

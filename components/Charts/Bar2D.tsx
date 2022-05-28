@@ -1,7 +1,8 @@
 import ReactFC from 'react-fusioncharts';
-import FusionCharts from 'fusioncharts';
-import Chart from 'fusioncharts/fusioncharts.charts';
-import FusionTheme from 'fusioncharts/themes/fusioncharts.theme.fusion';
+
+const FusionCharts = require('fusioncharts');
+const Chart = require('fusioncharts/fusioncharts.charts');
+const FusionTheme = require('fusioncharts/themes/fusioncharts.theme.fusion.js');
 
 ReactFC.fcRoot(FusionCharts, Chart, FusionTheme);
 
@@ -14,19 +15,21 @@ interface IProps {
   };
 }
 
-const Pie3D = ({ data }: IProps) => {
+const Bar2D = ({ data }: IProps) => {
   const chartConfigs = {
-    type: 'pie3d', // The chart type
+    type: 'bar2d', // The chart type
     width: '100%', // Width of the chart
     height: '400', // Height of the chart
     dataFormat: 'json', // Data type
     dataSource: {
       // Chart Configuration
       chart: {
-        caption: 'Languages Used',
+        caption: 'Most Forked',
         theme: 'fusion',
-        decimal: 0,
-        pieRadius: '45%'
+        yAxisName: 'Forks',
+        xAxisName: 'Repos',
+        xAxisNameFontSize: '16px',
+        yAxisNameFontSize: '16px'
       },
       // Chart Data
       data
@@ -35,4 +38,4 @@ const Pie3D = ({ data }: IProps) => {
   return <ReactFC {...chartConfigs} />;
 };
 
-export default Pie3D;
+export default Bar2D;

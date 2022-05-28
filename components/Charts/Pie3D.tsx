@@ -1,7 +1,7 @@
 import ReactFC from 'react-fusioncharts';
-import FusionCharts from 'fusioncharts';
-import Chart from 'fusioncharts/fusioncharts.charts';
-import FusionTheme from 'fusioncharts/themes/fusioncharts.theme.fusion';
+const FusionCharts = require('fusioncharts');
+const Chart = require('fusioncharts/fusioncharts.charts');
+const FusionTheme = require('fusioncharts/themes/fusioncharts.theme.fusion.js');
 
 ReactFC.fcRoot(FusionCharts, Chart, FusionTheme);
 
@@ -14,20 +14,19 @@ interface IProps {
   };
 }
 
-const Doughnut2D = ({ data }: IProps) => {
+const Pie3D = ({ data }: IProps) => {
   const chartConfigs = {
-    type: 'doughnut2d', // The chart type
+    type: 'pie3d', // The chart type
     width: '100%', // Width of the chart
     height: '400', // Height of the chart
     dataFormat: 'json', // Data type
     dataSource: {
       // Chart Configuration
       chart: {
-        caption: 'Stars Per Language',
+        caption: 'Languages Used',
         theme: 'fusion',
         decimal: 0,
-        donutRadius: '45%',
-        showPercentValues: 0
+        pieRadius: '45%'
       },
       // Chart Data
       data
@@ -36,4 +35,4 @@ const Doughnut2D = ({ data }: IProps) => {
   return <ReactFC {...chartConfigs} />;
 };
 
-export default Doughnut2D;
+export default Pie3D;

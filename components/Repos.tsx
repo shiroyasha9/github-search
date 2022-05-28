@@ -1,7 +1,12 @@
+import dynamic from 'next/dynamic';
 import React from 'react';
 import styled from 'styled-components';
-import { GithubContext } from '../context/context';
-import { Pie3D, Column3D, Bar2D, Doughnut2D } from './Charts';
+import { GithubContext } from '../context';
+
+const Pie3D = dynamic(() => import('./Charts/Pie3D'), { ssr: false });
+const Column3D = dynamic(() => import('./Charts/Column3D'), { ssr: false });
+const Bar2D = dynamic(() => import('./Charts/Bar2D'), { ssr: false });
+const Doughnut2D = dynamic(() => import('./Charts/Doughnut2D'), { ssr: false });
 
 interface ILanguage {
   label: string;

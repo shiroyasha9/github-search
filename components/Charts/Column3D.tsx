@@ -1,7 +1,7 @@
 import ReactFC from 'react-fusioncharts';
-import FusionCharts from 'fusioncharts';
-import Chart from 'fusioncharts/fusioncharts.charts';
-import FusionTheme from 'fusioncharts/themes/fusioncharts.theme.fusion';
+const FusionCharts = require('fusioncharts');
+const Chart = require('fusioncharts/fusioncharts.charts');
+const FusionTheme = require('fusioncharts/themes/fusioncharts.theme.fusion.js');
 
 ReactFC.fcRoot(FusionCharts, Chart, FusionTheme);
 
@@ -14,18 +14,18 @@ interface IProps {
   };
 }
 
-const Bar2D = ({ data }: IProps) => {
+const Column3D = ({ data }: IProps) => {
   const chartConfigs = {
-    type: 'bar2d', // The chart type
+    type: 'column3d', // The chart type
     width: '100%', // Width of the chart
     height: '400', // Height of the chart
     dataFormat: 'json', // Data type
     dataSource: {
       // Chart Configuration
       chart: {
-        caption: 'Most Forked',
+        caption: 'Most Popular',
         theme: 'fusion',
-        yAxisName: 'Forks',
+        yAxisName: 'Stars',
         xAxisName: 'Repos',
         xAxisNameFontSize: '16px',
         yAxisNameFontSize: '16px'
@@ -37,4 +37,4 @@ const Bar2D = ({ data }: IProps) => {
   return <ReactFC {...chartConfigs} />;
 };
 
-export default Bar2D;
+export default Column3D;

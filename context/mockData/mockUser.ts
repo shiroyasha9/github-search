@@ -28,14 +28,14 @@ const data: IUser = {
   location: 'Navi Mumbai, India',
   email: null,
   hireable: null,
-  bio: null,
+  bio: 'React | React Native | Next js',
   twitter_username: null,
-  public_repos: 9,
+  public_repos: 21,
   public_gists: 0,
-  followers: 7,
-  following: 8,
+  followers: 14,
+  following: 14,
   created_at: '2019-03-19T20:22:19Z',
-  updated_at: '2021-05-28T20:27:22Z'
+  updated_at: '2022-05-06T14:32:24Z'
 };
 
 export default data;
