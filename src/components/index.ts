@@ -1,5 +1,3 @@
-/** @format */
-
 import Info from './Info';
 import Repos from './Repos';
 import User from './User';

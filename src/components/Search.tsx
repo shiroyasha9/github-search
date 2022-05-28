@@ -1,14 +1,13 @@
-/** @format */
-
 import React from 'react';
 import styled from 'styled-components';
 import { MdSearch } from 'react-icons/md';
+
 import { GithubContext } from '../context/context';
 const Search = () => {
   const [user, setUser] = React.useState('');
   const { requests, error, searchGithubUser, isLoading } =
     React.useContext(GithubContext);
-  const handleSubmit = e => {
+  const handleSubmit = (e: React.SyntheticEvent) => {
     e.preventDefault();
     if (user) {
       searchGithubUser(user);

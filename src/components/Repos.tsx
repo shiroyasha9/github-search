@@ -1,27 +1,40 @@
-/** @format */
-
 import React from 'react';
 import styled from 'styled-components';
 import { GithubContext } from '../context/context';
 import { Pie3D, Column3D, Bar2D, Doughnut2D } from './Charts';
 
+interface ILanguage {
+  label: string;
+  value: number;
+  stars: number;
+}
+
 const Repos = () => {
   const { repos } = React.useContext(GithubContext);
+
   // creating objects of total languages in all repos
-  const languages = repos.reduce((total, item) => {
-    const { language, stargazers_count } = item;
-    if (!language) return total;
-    if (!total[language]) {
-      total[language] = { label: language, value: 1, stars: stargazers_count };
-    } else {
-      total[language] = {
-        ...total[language],
-        value: total[language].value + 1,
-        stars: total[language].stars + stargazers_count,
-      };
-    }
-    return total;
-  }, {});
+  const languages: { [language: string]: ILanguage } = repos.reduce(
+    (total, item) => {
+      const { language, stargazers_count } = item;
+      if (!language) return total;
+      if (!total[language]) {
+        total[language] = {
+          label: language,
+          value: 1,
+          stars: stargazers_count
+        };
+      } else {
+        total[language] = {
+          ...total[language],
+          value: total[language].value + 1,
+          stars: total[language].stars + stargazers_count
+        };
+      }
+      return total;
+    },
+    {} as { [language: string]: ILanguage }
+  );
+
   // Converting the object into an array and sorting based on Values
   const mostUsed = Object.values(languages)
     .sort((a, b) => {
@@ -46,8 +59,8 @@ const Repos = () => {
       return total;
     },
     {
-      stars: {},
-      forks: {},
+      stars: {} as { [index: number]: { label: string; value: number } },
+      forks: {} as { [index: number]: { label: string; value: number } }
     }
   );
 

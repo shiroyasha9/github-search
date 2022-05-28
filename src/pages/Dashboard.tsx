@@ -1,5 +1,3 @@
-/** @format */
-
 import React from 'react';
 import { Info, Repos, User, Search } from '../components';
 import loadingImage from '../images/preloader.gif';

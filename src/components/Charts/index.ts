@@ -1,5 +1,3 @@
-/** @format */
-
 import Column3D from './Column3D';
 import Bar2D from './Bar2D';
 import Pie3D from './Pie3D';

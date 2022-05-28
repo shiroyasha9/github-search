@@ -1,6 +1,6 @@
-/** @format */
+import { IUser } from '../../types';
 
-const data = {
+const data: IUser = {
   login: 'shiroyasha9',
   id: 48734821,
   node_id: 'MDQ6VXNlcjQ4NzM0ODIx',
@@ -35,7 +35,7 @@ const data = {
   followers: 7,
   following: 8,
   created_at: '2019-03-19T20:22:19Z',
-  updated_at: '2021-05-28T20:27:22Z',
+  updated_at: '2021-05-28T20:27:22Z'
 };
 
 export default data;

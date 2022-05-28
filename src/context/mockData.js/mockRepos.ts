@@ -1,6 +1,6 @@
-/** @format */
+import { IRepo } from '../../types';
 
-const data = [
+const data: IRepo[] = [
   {
     id: 345910527,
     node_id: 'MDEwOlJlcG9zaXRvcnkzNDU5MTA1Mjc=',
@@ -29,7 +29,7 @@ const data = [
       received_events_url:
         'https://api.github.com/users/shiroyasha9/received_events',
       type: 'User',
-      site_admin: false,
+      site_admin: false
     },
     html_url: 'https://github.com/shiroyasha9/burger-builder',
     description: null,
@@ -129,7 +129,7 @@ const data = [
     forks: 0,
     open_issues: 0,
     watchers: 0,
-    default_branch: 'master',
+    default_branch: 'master'
   },
   {
     id: 345938793,
@@ -159,7 +159,7 @@ const data = [
       received_events_url:
         'https://api.github.com/users/shiroyasha9/received_events',
       type: 'User',
-      site_admin: false,
+      site_admin: false
     },
     html_url: 'https://github.com/shiroyasha9/comfy-sloth-store',
     description: null,
@@ -262,7 +262,7 @@ const data = [
     forks: 0,
     open_issues: 0,
     watchers: 0,
-    default_branch: 'master',
+    default_branch: 'master'
   },
   {
     id: 288776291,
@@ -292,7 +292,7 @@ const data = [
       received_events_url:
         'https://api.github.com/users/shiroyasha9/received_events',
       type: 'User',
-      site_admin: false,
+      site_admin: false
     },
     html_url: 'https://github.com/shiroyasha9/DateStructInC',
     description:
@@ -391,7 +391,7 @@ const data = [
     forks: 0,
     open_issues: 0,
     watchers: 0,
-    default_branch: 'master',
+    default_branch: 'master'
   },
   {
     id: 303463997,
@@ -421,7 +421,7 @@ const data = [
       received_events_url:
         'https://api.github.com/users/shiroyasha9/received_events',
       type: 'User',
-      site_admin: false,
+      site_admin: false
     },
     html_url: 'https://github.com/shiroyasha9/Flappy-Bird-AI',
     description: null,
@@ -521,7 +521,7 @@ const data = [
     forks: 0,
     open_issues: 0,
     watchers: 0,
-    default_branch: 'master',
+    default_branch: 'master'
   },
   {
     id: 350817877,
@@ -551,7 +551,7 @@ const data = [
       received_events_url:
         'https://api.github.com/users/shiroyasha9/received_events',
       type: 'User',
-      site_admin: false,
+      site_admin: false
     },
     html_url: 'https://github.com/shiroyasha9/gifthub',
     description:
@@ -647,7 +647,7 @@ const data = [
     forks: 0,
     open_issues: 1,
     watchers: 1,
-    default_branch: 'master',
+    default_branch: 'master'
   },
   {
     id: 329951567,
@@ -677,7 +677,7 @@ const data = [
       received_events_url:
         'https://api.github.com/users/shiroyasha9/received_events',
       type: 'User',
-      site_admin: false,
+      site_admin: false
     },
     html_url: 'https://github.com/shiroyasha9/Javascript-Games',
     description: null,
@@ -780,7 +780,7 @@ const data = [
     forks: 0,
     open_issues: 0,
     watchers: 0,
-    default_branch: 'master',
+    default_branch: 'master'
   },
   {
     id: 293536304,
@@ -810,7 +810,7 @@ const data = [
       received_events_url:
         'https://api.github.com/users/shiroyasha9/received_events',
       type: 'User',
-      site_admin: false,
+      site_admin: false
     },
     html_url: 'https://github.com/shiroyasha9/PredictIt',
     description:
@@ -909,7 +909,7 @@ const data = [
     forks: 3,
     open_issues: 0,
     watchers: 0,
-    default_branch: 'master',
+    default_branch: 'master'
   },
   {
     id: 345899016,
@@ -939,7 +939,7 @@ const data = [
       received_events_url:
         'https://api.github.com/users/shiroyasha9/received_events',
       type: 'User',
-      site_admin: false,
+      site_admin: false
     },
     html_url: 'https://github.com/shiroyasha9/superchat',
     description: null,
@@ -1037,7 +1037,7 @@ const data = [
     forks: 0,
     open_issues: 0,
     watchers: 0,
-    default_branch: 'master',
+    default_branch: 'master'
   },
   {
     id: 302036373,
@@ -1067,7 +1067,7 @@ const data = [
       received_events_url:
         'https://api.github.com/users/shiroyasha9/received_events',
       type: 'User',
-      site_admin: false,
+      site_admin: false
     },
     html_url: 'https://github.com/shiroyasha9/ToDo-App',
     description: null,
@@ -1164,8 +1164,8 @@ const data = [
     forks: 0,
     open_issues: 0,
     watchers: 0,
-    default_branch: 'master',
-  },
+    default_branch: 'master'
+  }
 ];
 
 export default data;

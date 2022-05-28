@@ -1,6 +1,6 @@
-/** @format */
+import { IFollower } from '../../types';
 
-const data = [
+const data: IFollower[] = [
   {
     login: 'KarthikUdyawar',
     id: 54676225,
@@ -23,7 +23,7 @@ const data = [
     received_events_url:
       'https://api.github.com/users/KarthikUdyawar/received_events',
     type: 'User',
-    site_admin: false,
+    site_admin: false
   },
   {
     login: 'Akshay-Savad',
@@ -47,7 +47,7 @@ const data = [
     received_events_url:
       'https://api.github.com/users/Akshay-Savad/received_events',
     type: 'User',
-    site_admin: false,
+    site_admin: false
   },
   {
     login: 'Aakarsh-verma',
@@ -71,7 +71,7 @@ const data = [
     received_events_url:
       'https://api.github.com/users/Aakarsh-verma/received_events',
     type: 'User',
-    site_admin: false,
+    site_admin: false
   },
   {
     login: 'Athul0491',
@@ -94,7 +94,7 @@ const data = [
     received_events_url:
       'https://api.github.com/users/Athul0491/received_events',
     type: 'User',
-    site_admin: false,
+    site_admin: false
   },
   {
     login: 'Adnan-2001',
@@ -117,7 +117,7 @@ const data = [
     received_events_url:
       'https://api.github.com/users/Adnan-2001/received_events',
     type: 'User',
-    site_admin: false,
+    site_admin: false
   },
   {
     login: 'Roy6801',
@@ -138,7 +138,7 @@ const data = [
     events_url: 'https://api.github.com/users/Roy6801/events{/privacy}',
     received_events_url: 'https://api.github.com/users/Roy6801/received_events',
     type: 'User',
-    site_admin: false,
+    site_admin: false
   },
   {
     login: 'anujjoshi63',
@@ -161,8 +161,8 @@ const data = [
     received_events_url:
       'https://api.github.com/users/anujjoshi63/received_events',
     type: 'User',
-    site_admin: false,
-  },
+    site_admin: false
+  }
 ];
 
 export default data;

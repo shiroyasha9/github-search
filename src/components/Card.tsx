@@ -1,13 +1,15 @@
-/** @format */
-
-import React from 'react';
-import { GithubContext } from '../context/context';
+import { useContext } from 'react';
 import styled from 'styled-components';
 import { MdBusiness, MdLocationOn, MdLink } from 'react-icons/md';
+
+import { GithubContext } from '../context/context';
+
 const Card = () => {
-  const { githubUser } = React.useContext(GithubContext);
+  const { githubUser } = useContext(GithubContext);
+
   const { avatar_url, html_url, name, company, blog, bio, location, login } =
     githubUser;
+
   return (
     <Wrapper>
       <header>
