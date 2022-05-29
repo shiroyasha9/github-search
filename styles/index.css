@@ -77,6 +77,20 @@ body {
   line-height: 1.5;
   font-size: 0.875rem;
 }
+body::-webkit-scrollbar,
+.followers::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+body::-webkit-scrollbar-thumb,
+.followers::-webkit-scrollbar-thumb {
+  background-color: #bbbbbb;
+  border-radius: 5em;
+}
+body::-webkit-scrollbar-thumb:hover,
+.followers::-webkit-scrollbar-thumb:hover {
+  background-color: #a2a2a2;
+}
 ul {
   list-style-type: none;
 }

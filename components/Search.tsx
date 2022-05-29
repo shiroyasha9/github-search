@@ -46,11 +46,19 @@ const Wrapper = styled.div`
   display: grid;
   gap: 1rem 1.75rem;
   margin-top: 4rem;
+  h3 {
+    margin-bottom: 0;
+    color: var(--clr-grey-5);
+    font-weight: 400;
+    text-align: center;
+    font-size: 1rem;
+  }
   @media (min-width: 768px) {
     grid-template-columns: 1fr max-content;
     align-items: center;
     h3 {
       padding: 0 0.5rem;
+      font-size: 1.5rem;
     }
   }
   .form-control {
@@ -104,11 +112,6 @@ const Wrapper = styled.div`
         font-size: 0.85rem;
       }
     }
-  }
-  h3 {
-    margin-bottom: 0;
-    color: var(--clr-grey-5);
-    font-weight: 400;
   }
 `;
 const ErrorWrapper = styled.article`
